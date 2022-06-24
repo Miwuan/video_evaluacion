@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	box-sizing: border-box;
+
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 100;
+	text-align: center;
+
+	user-select: none;
+
+	background: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+	text-decoration: none;
+}
+p {
+	margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+	body {
+		font-size: 1rem;
+	}
+}
+.Button {
+	background-color: white;
+	color: #ccc;
+	padding: 0.1rem 30px;
+	display: block;
+	transition: all 0.1s linear;
+	font-size: 40px;
+	border: none;
+	cursor: pointer;
+}
+.Button:hover {
+	color: hsl(120, 90%, 44%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*
+  Card
+  */
+header {
+	background-color: rgb(47, 47, 49);
+	color: white;
+	height: 400px;
+	width: 100vw;
+
+	display: block;
+
+	text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+	font-size: 2.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+h1,
+h3 {
+	font-weight: 300;
+	padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cabecera {
+	margin: 0;
+	padding: 50px;
+	position: relative;
+}
+
+.Card {
+	background-color: #fff;
+	box-shadow: 10px 10px 20px rgba(43, 41, 41, 0.376);
+	display: block;
+	margin: -170px auto;
+	min-height: 400px;
+	position: relative;
+	width: 600px;
+}
+
+.titulo {
+	background-color: #f9f9f9;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	height: 120px;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+
+.titulo img {
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 10px #fff;
+	left: 50%;
+	padding: 5px;
+	position: absolute;
+	top: 20%;
+	transform: translate(-50%, 10%);
+}
+
+.user-title {
+	font-size: 18px;
+	margin-bottom: 0;
+}
+.user-value {
+	color: black;
+	font-size: 28px;
+}
+.values-list {
+	padding-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	justify-content: center;
+}
+.icon {
+	background: transparent;
+	border: transparent;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: gray;
+	transition: all 0.1s linear;
+}
+.icon:hover {
+	color: hsl(120, 90%, 44%);
+}
+.active {
+	color: hsl(120, 90%, 44%);
+}
+.Flechas {
+	padding-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 800px) {
+	.user-value {
+		font-size: 38px;
+	}
+	.icon {
+		font-size: 2rem;
+	}
 }
